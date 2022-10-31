@@ -7,7 +7,7 @@
 1. Build image
 
 ```sh
-docker build -t kubia .
+docker build -t kubia:1.0 .
 
 docker run --name kubia-container -v src:/src -p 8090:8090 -d kubia
 ```
@@ -23,7 +23,7 @@ minikube image load kubia:1.0
 1. Run in pods
 
 ```sh
-kubectl run kubia --image=kubia --port=8080
+kubectl run kubia --image=kubia:1.0 --port=8080
 
 kubectl expose pod kubia --type=NodePort
 
